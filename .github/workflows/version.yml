@@ -1,0 +1,15 @@
+name: Check Docker Version
+
+on:
+  - push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Check Docker Version
+        run: docker version
+
